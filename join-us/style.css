@@ -1,0 +1,256 @@
+:root {
+    --main-color: #058265;
+    --alt-color: #55edc9;
+    --main-transition: 0.7s ease;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--alt-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input::placeholder {
+    color: #EEE;
+    font-size: 15px;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+body {
+    background-image: url(../banner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container .logo img {
+    position: relative;
+    animation: up-down linear infinite 3s;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 50px;
+    margin-left: 300px;
+    padding: 50px;
+    background-color: #111;
+    border-radius: 15px;
+}
+
+h1 {
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.container form .content .tab {
+    display: none;
+}
+
+
+h3 {
+    color: #777;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+input,select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #000;
+    border-radius: 5px;
+    border: #000 1px solid;
+    transition: var(--main-transition);
+    color: #FFF;
+}
+
+.inputr.invalid {
+    background-color: #ffdddd;
+    color: #000;
+  }
+
+.inputr.invalid::placeholder {
+    color: #000;
+}
+
+input:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container button {
+    padding: 10px;
+    margin-top: 40px;
+    background-color: var(--main-color);
+    border: none;
+    color: #FFF;
+    text-align: center;
+    border-radius: 7px;
+    transition: var(--main-transition);
+}
+
+.container button:hover {
+    background-color: var(--alt-color);
+    color: #000;
+}
+
+.sbtn {
+    display: none;
+}
+
+.sbtn.active {
+    display: block;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+
+  @keyframes up-down {
+    0%,
+    100% {
+        top: 0;
+    }
+    50% {
+        top: -30px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    form {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .container button {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    form {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .container button {
+        width: 700px;
+    }
+}

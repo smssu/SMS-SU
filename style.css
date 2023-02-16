@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* width */
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #058265;
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #55edc9;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -488,7 +508,7 @@ h2::after {
     justify-content: center;
     margin: 40px 0;
 }
-.our-team .content  .hbcard {
+.our-team .content .hbcard {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -496,13 +516,13 @@ h2::after {
     align-items: center;
     width: 300px;
     height: 400px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     margin: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }
-.our-team .content  .hbcard .card-content {
+.our-team .content .hbcard .card-content {
     position: relative;
     display: flex;
     justify-content: center;
@@ -511,27 +531,35 @@ h2::after {
     opacity: 0.8;
     transition: 0.7s ease;
 }
-.our-team .content  .hbcard:hover .card-content{
+.our-team .content .hbcard:hover .card-content{
     opacity: 2;
     transform: translateY(-20px);
 }
-.our-team .content  .hbcard .image {
+.our-team .content .hbcard .image {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 10px solid rgba(0, 0, 0, 0.25);
+}
+.our-team .content .high-board .hbcard .image {
+    position: relative;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
     border: 10px solid rgba(0, 0, 0, 0.25);
 }
-.our-team .content  .hbcard .image img {
+.our-team .content .hbcard .image img {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
-.our-team .content  .hbcard .info h1 {
+.our-team .content .hbcard .info h1 {
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
@@ -540,7 +568,7 @@ h2::after {
     margin: 20px 0 10px;
     text-align: center;
 }
-.our-team .content  .hbcard .info h3 {
+.our-team .content .hbcard .info h3 {
     font-size: 12px;
     font-weight: 300;
     text-transform: initial;
@@ -553,19 +581,23 @@ h2::after {
 }
 .our-team .content .members .president {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .our-team .content .members .president .hbcard {
-    width: 500px;
+    width: 21.25em;
     height: 400px;
 }
 .our-team .content .members .heads {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 .our-team .content .members .heads .heads-card {
     display: flex;
@@ -575,12 +607,12 @@ h2::after {
     flex-wrap: wrap;
 }
 .our-team .content .members .heads .hbcard {
-    width: 185px;
+    width: 18.25em;
     height: 300px;
 }
 .our-team .content .members .heads .hbcard .image {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 .our-team .content .members .heads .hbcard .info h1 {
     font-size: 15px;
